@@ -12,14 +12,16 @@ set hlsearch        " 搜索高亮
 " 编辑相关
 set expandtab       " 把制表符换成空格
 
-
 " 折叠功能
 " 空格键折叠
 nnoremap <space> za
 
-set foldmethod=indent " 折叠方式: 缩进
+set foldmethod=indent   " 折叠方式: 缩进
+
+" 其他
+:let g:netrw_dirhistmax = 0     " 不保留历史记录
 
 " plugged插件
 call plug#begin("~/.vim/plugged")
-Plug 'mtdl9/vim-log-highlighting'  " 日志高亮插件
+Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
 call plug#end()

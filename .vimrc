@@ -23,7 +23,11 @@ set foldmethod=indent   " 折叠方式: 缩进
 " 其他
 :let g:netrw_dirhistmax = 0     " 不保留历史记录
 
-" plugged插件
+" plugged plugin
 call plug#begin("~/.vim/plugged")
 Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
 call plug#end()
+
+" pathogen plugin
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()

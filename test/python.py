@@ -4,4 +4,3 @@ def main():
 
 # jA↵ 应该出现
 main(
-

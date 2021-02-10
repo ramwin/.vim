@@ -11,6 +11,8 @@ set hlsearch        " 搜索高亮
 
 " 编辑相关
 set expandtab       " 把制表符换成空格
+set shiftwidth=4    " 默认一个tab为4个空格
+set tabstop=20       " tab宽度为4
 
 " 折叠功能
 " 空格键折叠

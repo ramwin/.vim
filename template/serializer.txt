@@ -1,0 +1,16 @@
+class ModelNameBaseSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.ModelName
+        fields = [
+            "id",
+            "create_datetime",
+            "update_datetime",
+        ]
+
+
+class ModelNamelistSerializer(ModelNameBaseSerializer):
+
+    class Meta(ModelNameBaseSerializer.Meta):
+        fields = ModelNameBaseSerializer.Meta.fields + [
+        ]

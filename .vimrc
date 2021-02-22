@@ -14,6 +14,9 @@ set title           " 显示文件标题
 set expandtab       " 把制表符换成空格
 set shiftwidth=4    " 默认一个tab为4个空格
 set tabstop=20       " tab宽度为4
+set autoindent       " 自动缩进
+set wildmode=longest,list,full  " tab的时候，和bash一样
+set wildmenu
 
 " 跳转
 :set mps+=<:>  " add square bracket to matchpairs

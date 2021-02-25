@@ -18,6 +18,9 @@ set autoindent       " 自动缩进
 set wildmode=longest,list,full  " tab的时候，和bash一样
 set wildmenu
 
+" 默认模板
+au BufNewFile *.vue 0r ~/.vim/template/vue.template  " 打开vue文件时自动导入模板
+
 " 跳转
 :set mps+=<:>  " add square bracket to matchpairs
 

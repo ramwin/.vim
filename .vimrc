@@ -17,9 +17,16 @@ set tabstop=20       " tab宽度为4
 set autoindent       " 自动缩进
 set wildmode=longest,list,full  " tab的时候，和bash一样
 set wildmenu
+set backspace=indent,eol,start
+set ignorecase       " 默认不关注大小写
+set smartcase        " 搜索时自动根据搜索的内容判断是否忽略大小写
 
 " 默认模板
 au BufNewFile *.vue 0r ~/.vim/template/vue.template  " 打开vue文件时自动导入模板
+au BufNewFile *.sh 0r ~/.vim/template/sh.template  " 打开vue文件时自动导入模板
+
+" 关闭文件后校验
+autocmd BufWritePost *.py !flake8 <afile>
 
 " 跳转
 :set mps+=<:>  " add square bracket to matchpairs
@@ -55,3 +62,4 @@ call plug#end()
 " pathogen plugin
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
+

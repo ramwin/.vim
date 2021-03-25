@@ -14,3 +14,39 @@ class ModelNamelistSerializer(ModelNameBaseSerializer):
     class Meta(ModelNameBaseSerializer.Meta):
         fields = ModelNameBaseSerializer.Meta.fields + [
         ]
+
+
+class ModelNamecreateSerializer(ModelNameBaseSerializer):
+
+    class Meta(ModelNameBaseSerializer.Meta):
+        fields = ModelNameBaseSerializer.Meta.fields + [
+        ]
+
+
+class ModelNamepartial_updateSerializer(ModelNameBaseSerializer):
+
+    class Meta(ModelNameBaseSerializer.Meta):
+        fields = ModelNameBaseSerializer.Meta.fields + [
+        ]
+
+
+class ModelNameupdateSerializer(ModelNameBaseSerializer):
+
+    class Meta(ModelNameBaseSerializer.Meta):
+        fields = ModelNameBaseSerializer.Meta.fields + [
+        ]
+
+
+class ModelNameViewSet(ModelViewSet):
+    queryset = models.ModelName.objects.all()
+    serializers = serializers
+    permission_classes = [IsAuthenticated, DjangoObjectPermission]
+    filterset_class = ModelNameFilterSet
+    pagination_class = PageNumberPaginator
+
+
+class ModelNameFilterSet(django_filters.rest_framework.ModelFilterSet):
+
+    class Meta:
+        model = models.ModelName
+        fields = []

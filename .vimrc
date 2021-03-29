@@ -20,6 +20,7 @@ set wildmenu
 set backspace=indent,eol,start
 set ignorecase       " 默认不关注大小写
 set smartcase        " 搜索时自动根据搜索的内容判断是否忽略大小写
+set iskeyword+=\-    " 连字符当作一个单词
 
 " 默认模板
 au BufNewFile *.vue 0r ~/.vim/template/vue.template  " 打开vue文件时自动导入模板
@@ -30,6 +31,7 @@ autocmd BufWritePost *.py !flake8 <afile>
 
 " 跳转
 :set mps+=<:>  " add square bracket to matchpairs
+set incsearch  " 查找关键字时，及时匹配, 边搜索边跳转
 
 " 折叠功能
 " 空格键折叠

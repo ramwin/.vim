@@ -51,6 +51,8 @@ func! RunCode()
         exec "!time node %"
     elseif &filetype == 'sh'
         exec "!time /bin/bash %"
+    elseif &filetype == 'c'
+        exec "!time wxc %"
     endif
 endfunc
 
@@ -67,3 +69,4 @@ call plug#end()
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
+set shellcmdflag=-ic

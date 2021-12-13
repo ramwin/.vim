@@ -52,7 +52,9 @@ func! RunCode()
     elseif &filetype == 'sh'
         exec "!time /bin/bash %"
     elseif &filetype == 'c'
-        exec "!time wxc %"
+        exec "!time gcc % && ./a.out"
+    elseif &filetype == 'cpp'
+        exec "!time g++ % && ./a.out"
     endif
 endfunc
 
@@ -69,4 +71,4 @@ call plug#end()
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
-set shellcmdflag=-ic
+" set shellcmdflag=-ic

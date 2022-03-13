@@ -26,6 +26,9 @@ set iskeyword+=\-    " 连字符当作一个单词
 " 默认模板
 au BufNewFile *.vue 0r ~/.vim/template/vue.template  " 打开vue文件时自动导入模板
 au BufNewFile *.sh 0r ~/.vim/template/sh.template  " 打开vue文件时自动导入模板
+au BufNewFile *.c 0r ~/.vim/template/c.template  " 打开vue文件时自动导入模板
+au BufNewFile *.cpp 0r ~/.vim/template/cpp.template  " 打开vue文件时自动导入模板
+au BufNewFile *.py 0r ~/.vim/template/python.template  " 打开vue文件时自动导入模板
 
 " 关闭文件后校验
 autocmd BufWritePost *.py !flake8 <afile>
@@ -45,6 +48,7 @@ set foldmethod=indent   " 折叠方式: 缩进
 map <F5> :call RunCode()<CR>
 func! RunCode()
     exec "w"
+    echo '执行'
     if &filetype == 'python'
         exec "!time python3 %"
     elseif &filetype == 'javascript'

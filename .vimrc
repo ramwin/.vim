@@ -58,7 +58,7 @@ func! RunCode()
     elseif &filetype == 'c'
         exec "!time gcc % && ./a.out"
     elseif &filetype == 'cpp'
-        exec "!time g++ % && ./a.out"
+        exec "!time g++ --std=c++20 % && ./a.out"
     endif
 endfunc
 

@@ -4,3 +4,6 @@
 [submodule "plugged/vim-markdown-folding"]
 	path = plugged/vim-markdown-folding
 	url = https://github.com/masukomi/vim-markdown-folding.git
+[submodule "bundle/syntastic"]
+    path = bundle/syntastic
+    url = https://github.com/vim-syntastic/syntastic.git

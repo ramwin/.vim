@@ -31,7 +31,7 @@ au BufNewFile *.cpp 0r ~/.vim/template/cpp.template  " 打开vue文件时自动�
 au BufNewFile *.py 0r ~/.vim/template/python.template  " 打开vue文件时自动导入模板
 
 " 关闭文件后校验
-autocmd BufWritePost *.py !flake8 <afile>
+autocmd BufWritePost *.py !pylint <afile>
 
 " 跳转
 :set mps+=<:>  " add square bracket to matchpairs
@@ -58,7 +58,7 @@ func! RunCode()
     elseif &filetype == 'c'
         exec "!time gcc % && ./a.out"
     elseif &filetype == 'cpp'
-        exec "!time g++ -O0 --std=c++20 % && ./a.out"
+        exec "!time g++ -O0 % && ./a.out"
     endif
 endfunc
 
@@ -71,6 +71,7 @@ Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
 " Plug 'masukomi/vim-markdown-folding'  " markdown高亮插件
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 " pathogen plugin
@@ -78,3 +79,8 @@ call plug#end()
 execute pathogen#infect()
 
 " set shellcmdflag=-ic
+set noswapfile  " 不要生成.swp文件, 太麻烦了, 用git看太难受
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red

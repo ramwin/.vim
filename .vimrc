@@ -68,7 +68,9 @@ endfunc
 " plugged plugin
 call plug#begin("~/.vim/plugged")
 Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
-Plug 'masukomi/vim-markdown-folding'  " markdown高亮插件
+" Plug 'masukomi/vim-markdown-folding'  " markdown高亮插件
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 call plug#end()
 
 " pathogen plugin

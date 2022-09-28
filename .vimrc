@@ -6,7 +6,7 @@ syntax enable       " 语法高亮
 " 显示相关
 set number          " 设置行号显示
 set relativenumber  " 设置相对行号
-set colorcolumn=80  " 80列高亮
+set colorcolumn=120  " 120列高亮
 set hlsearch        " 搜索高亮
 set title           " 显示文件标题
 set scrolloff=2

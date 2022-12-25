@@ -7,3 +7,9 @@
 [submodule "bundle/syntastic"]
     path = bundle/syntastic
     url = https://github.com/vim-syntastic/syntastic.git
+[submodule "plugged/jedi-vim"]
+	path = plugged/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "plugged/tabular"]
+	path = plugged/tabular
+	url = https://github.com/godlygeek/tabular.git

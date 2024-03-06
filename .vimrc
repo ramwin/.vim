@@ -73,6 +73,7 @@ Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'davidhalter/jedi-vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " pathogen plugin

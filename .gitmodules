@@ -13,3 +13,6 @@
 [submodule "plugged/tabular"]
 	path = plugged/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "plugged/nerdtree"]
+	path = plugged/nerdtree
+	url = https://github.com/preservim/nerdtree.git

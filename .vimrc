@@ -80,7 +80,7 @@ call plug#end()
 execute pathogen#infect()
 
 " set shellcmdflag=-ic
-set noswapfile  " 不要生成.swp文件, 太麻烦了, 用git看太难受
+" set noswapfile  " 不要生成.swp文件, 太麻烦了, 用git看太难受
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red

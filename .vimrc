@@ -32,6 +32,7 @@ au BufNewFile *.py 0r ~/.vim/template/python.template  " 打开vue文件时自�
 
 " 关闭文件后校验
 autocmd BufWritePost *.py !pylint <afile>
+autocmd BufWritePost *.py !mypy --follow-imports skip <afile>
 autocmd BufWritePost *.less !lessc <afile> > <afile>:r:r.css
 
 " 跳转

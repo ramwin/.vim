@@ -30,6 +30,9 @@ au BufNewFile *.c 0r ~/.vim/template/c.template  " 打开vue文件时自动导�
 au BufNewFile *.cpp 0r ~/.vim/template/cpp.template  " 打开vue文件时自动导入模板
 au BufNewFile *.py 0r ~/.vim/template/python.template  " 打开vue文件时自动导入模板
 
+" 日志文件不监听
+autocmd BufRead *.log set noautoread  " 打开日志文件时不reload
+
 " 关闭文件后校验
 autocmd BufWritePost *.py !pylint <afile>
 autocmd BufWritePost *.py !mypy --follow-imports skip <afile>

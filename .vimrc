@@ -76,13 +76,13 @@ endfunc
 
 " plugged plugin
 call plug#begin("~/.vim/plugged")
-Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
-" Plug 'masukomi/vim-markdown-folding'  " markdown高亮插件
-Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
 Plug 'davidhalter/jedi-vim'
-Plug 'preservim/nerdtree'
+Plug 'godlygeek/tabular'
+Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
+Plug 'masukomi/vim-markdown-folding'  " markdown高亮插件
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+" Plug 'preservim/vim-markdown'
 call plug#end()
 
 " pathogen plugin
@@ -90,7 +90,7 @@ call plug#end()
 execute pathogen#infect()
 
 " set shellcmdflag=-ic
-" set noswapfile  " 不要生成.swp文件, 太麻烦了, 用git看太难受
+set noswapfile  " 不要生成.swp文件, 太麻烦了, 用git看太难受
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
@@ -101,3 +101,7 @@ let g:vim_markdown_new_list_item_indent = 4
 
 set wrap
 let @c="0yyPJs\", \"\<Esc>0i\(\"\<Esc>$a\"\),\<Esc>j0"
+:let @v="^dt:pf C,\<Esc>F:P0f:s: \<Esc>j"
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+let g:C_UseTool_cmake = 'yes'
+let g:C_UseTool_doxygen = 'yes'

@@ -19,3 +19,6 @@
 [submodule "bundle/Vundle.vim"]
 	path = bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "plugged/c.vim"]
+	path = plugged/c.vim
+	url = https://github.com/vim-scripts/c.vim.git

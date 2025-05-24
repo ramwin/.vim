@@ -82,7 +82,7 @@ Plug 'mtdl9/vim-log-highlighting'   " 日志高亮插件
 Plug 'masukomi/vim-markdown-folding'  " markdown高亮插件
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
-" Plug 'preservim/vim-markdown'
+Plug 'preservim/vim-markdown'
 call plug#end()
 
 " pathogen plugin
@@ -91,10 +91,11 @@ execute pathogen#infect()
 
 " set shellcmdflag=-ic
 set noswapfile  " 不要生成.swp文件, 太麻烦了, 用git看太难受
-highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+" 不知道为什么加了highlight
+" highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+" highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+" highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+" highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_new_list_item_indent = 4

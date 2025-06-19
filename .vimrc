@@ -106,3 +106,12 @@ let @c="0yyPJs\", \"\<Esc>0i\(\"\<Esc>$a\"\),\<Esc>j0"
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 let g:C_UseTool_cmake = 'yes'
 let g:C_UseTool_doxygen = 'yes'
+
+let hostname = system('hostname')
+
+" 根据主机名判断
+if hostname =~ 'wangxiangdeMac-mini.local'
+    " 在匹配的主机上执行的配置
+    let g:jedi#environment_path = "/Users/wangx/venv/bin/python"
+else
+endif

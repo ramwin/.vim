@@ -13,7 +13,7 @@ import os
 
 import re
 
-from .test_obj import Student
+from test_obj import Student
 
 
 def main():
